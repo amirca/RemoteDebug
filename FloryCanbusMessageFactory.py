@@ -8,7 +8,7 @@ from J1939.EngineFluidLevelPressure1_65263 import EngineFluidLevelPressure1_6526
 from J1939.EngineFluidLevelPressure2_65243 import EngineFluidLevelPressure2_65243
 from J1939.EngineHoursRevolutions_65253 import EngineHoursRevolutions_65253
 from J1939.EngineTemperature1_65262 import EngineTemperature1_65262
-from Flory.FloryProprietaryA_61184 import FloryProprietaryA_61184
+from Flory.FloryProprietaryB_65380 import FloryProprietaryB_65380
 from J1939.FuelEconomyLiquid_65266 import FuelEconomyLiquid_65266
 from J1939.IntakeExhaustConditions1_65270 import IntakeExhaustConditions1_65270
 from J1939.CruiseControlVehicleSpeed1_65265 import CruiseControlVehicleSpeed1_65265
@@ -29,7 +29,7 @@ class FloryCanbusMessageFactory:
     @staticmethod
     def create_message(pgn, data):
         if pgn == FLORY_VEHICLE_PRODUCT_LINE_MESSAGE_PGN:
-            return FloryProprietaryA_61184(pgn, data)
+            return FloryProprietaryB_65380(pgn, data)
         if pgn == '61444':  # Electronic Engine Controller 1
             return ElectronicEngineController1_61444(pgn, data)
         if pgn == '65110':  # After Treatment 1 Diesel Exhaust Fluid Tank

@@ -9,7 +9,7 @@ import urllib3
 
 from Consts import FLORY_VEHICLE_PRODUCT_LINE_MESSAGE_PGN, SERVER_IP, SERVER_PORT, SPLUNK_AUTHORIZATION_KEY, \
     SPLUNK_ADDRESS
-from Flory.FloryProprietaryA_61184 import FloryProprietaryA_61184
+from Flory.FloryProprietaryB_65380 import FloryProprietaryB_65380
 from FloryCanbusMessageFactory import FloryCanbusMessageFactory
 
 urllib3.disable_warnings()
@@ -50,8 +50,8 @@ def on_new_client(client_socket, addr):
                 data = item[5:]
 
                 if model_id is None and pgn == FLORY_VEHICLE_PRODUCT_LINE_MESSAGE_PGN:
-                    model_id = FloryProprietaryA_61184.get_model_id(data)
-                    model_name = FloryProprietaryA_61184.get_model_name(model_id)
+                    model_id = FloryProprietaryB_65380.get_model_id(data)
+                    model_name = FloryProprietaryB_65380.get_model_name(model_id)
 
                 if model_id is None:
                     continue

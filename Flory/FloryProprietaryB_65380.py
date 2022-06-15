@@ -2,10 +2,10 @@ from Consts import FLORY_VEHICLE_PRODUCT_LINE_34_SERIES_SWEEPER_ID, FLORY_VEHICL
     FLORY_VEHICLE_PRODUCT_LINE_8770_HARVESTER_ID, FLORY_VEHICLE_PRODUCT_LINE_8770_HARVESTER_NAME
 from FloryCanbusMessage import FloryCanbusMessage
 
-# PGN 61184
+# PGN 65380
 
 
-class FloryProprietaryA_61184(FloryCanbusMessage):
+class FloryProprietaryB_65380(FloryCanbusMessage):
 
     def __init__(self, pgn, data):
         super().__init__(pgn, data)
